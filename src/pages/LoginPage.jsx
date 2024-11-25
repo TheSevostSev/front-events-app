@@ -15,8 +15,6 @@ const LoginPage = () => {
   };
 
   const login = async () => {
-    console.log("Email", user.email);
-    console.log("Password", user.password);
     const token = btoa(`${user.email}:${user.password}`);
     const data = await signIn(token);
 
